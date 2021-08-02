@@ -1,0 +1,57 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class='text-center container'>
+    <h2>Search books and browse your favorite</h2>
+    <p>just enter the search query to obtain the results</p><b></b>
+    <form action="" method="post">
+        {%csrf_token%}
+        {{Dashboard}}
+        <input class="btn btn-danger" type="submit" value="Submit">
+    </form><br>
+    {%for item in results%}
+    <a href="{{item.preview}}" target="_blank">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="{{item.thumbnail}}" alt="">
+
+                    </div>
+                    <div class="col-md-9">
+                        <h3 class="p-0 m-0">{{item.title}}</h3>
+                        <b>
+                            <u>
+                                <h5 class="p-0 m-0">{{item.subtitle}}</h5>
+                            </u>
+                        </b>
+                        {% if item.description %}
+                        <h6 class="p-0 m-1">{{item.description}}</h6>
+                        {%endif%}
+                        {% if item.categories %}
+                        <b>
+                            <h6 class="ml-0 mt-3">Category:
+                                {%for category in item.categories %}
+                                    {{category}}
+                                {%endfor%}
+                            </h6>
+                         {%endif%}
+                            {% if item.count %}
+                            <h6 class="ml-0 mt-1">Pages: {{item.count}}</h6>
+                            {%endif%}
+                            {% if item.rating %}
+                            <h6 class="ml-0 mt-1">Rating: {{item.rating}}</h6>
+                            {%endif%}
+                        </b>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    {%endfor%}
+    <br>
+</section>
+
+{% endblock content %}
