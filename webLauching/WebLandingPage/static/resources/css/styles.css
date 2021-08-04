@@ -1,11 +1,4 @@
-/* #group.howkteam.com -> trao đổi, hỏi đáp, thảo luận
-     #nhớ Like và Sub video youtube
-     #Code: howkteam.com
-     #Kho tài liệu: Howkteam.com/documentation
-     #Hỏi đáp tại website: howkteam.com/questions => người khác tìm lại có đáp án  */
-/* ----------------------------- */
-/* -----DEFAULT SETUP */
-/* ------------------------------- */
+
  *{
     padding: 0px;
     margin: 0px;
@@ -124,7 +117,7 @@ section{
 /* ------------------HEADER------------------ */
 /* ------------------------------------------------ */
 header{
-    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)), url("../img/background4.jpeg");
+    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)), url("../images/background4.jpeg");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -221,7 +214,7 @@ header{
     border-radius: 20px;
     border: 4px solid #c2e1fd;
     box-shadow: 0px 5px 15px 5px #265077 ;
-    transition: all .7;
+    transition: all .7s;
     /* x-y-độ mờ-đọ phóng rộng-màu */
     /* filter: brightness(55%) blur(2px); */
 }
@@ -291,7 +284,7 @@ header{
 /* ---------TESTIMONIALS SECTION ---------- */
 /* ------------------------------------------ */
 .testimonials-section{
-    background-image:linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)), url('../img/background2.jpeg');
+    background-image:linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)), url('../images/background2.jpeg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -375,7 +368,7 @@ figcaption{
 /* ----------CONTACT FORM------------- */
 /* ------------------------------------------- */
 .contact-section{
-    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('../img/background5.jpeg');
+    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('../images/background5.jpeg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
